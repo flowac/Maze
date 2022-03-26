@@ -1,7 +1,5 @@
 #include "lib.h"
 
-#define BUF80 80
-
 const char WALL = 'X';
 const char PATH = ' ';
 POINT mSize; // max width and length (starts counting from 1)

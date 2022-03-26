@@ -4,6 +4,8 @@
 #include <string.h>
 #include <time.h>
 
+#define BUF80 80
+
 typedef enum
 {
 	MOK       = 0, // move registered
