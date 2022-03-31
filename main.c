@@ -47,7 +47,7 @@ char **genMaze(int width, int height)
 		// this loop might hang if the maze gets stuck
 		while (1)
 		{
-			MDIRECTION dir = rand() % 4;
+			MDIRECTION dir = (rand() % 4);
 			tmp = curr;
 			switch (dir)
 			{
@@ -77,7 +77,7 @@ char **genMaze(int width, int height)
 		{
 			for (int m = 0; m < 10; m++)
 			{
-				MDIRECTION dir = rand() % 4;
+				MDIRECTION dir = (rand() % 4);
 				tmp = curr;
 				switch (dir)
 				{
@@ -110,6 +110,15 @@ int main(int argc, char** argv)
 
 	char **maze = genMaze(15, 15);
 	printMaze(maze);
+
+	mMaze = maze;
+	mSize.x = 15;
+	mSize.y = 15;
+	mCurr.x = mSize.x / 2;
+	mCurr.y = 0;
+	printf("\nSteps taken: %d\n", runSoukup());
+	printMaze(maze);
+
 	freeMaze(maze);
 
 	return 0;
